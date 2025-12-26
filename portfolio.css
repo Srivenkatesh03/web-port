@@ -1,0 +1,126 @@
+:root{
+    --primary--dark :"#4E56C0";
+    --secondary--dark: "#9B5DE0" ;
+    --primary--light: "#D78FEE";
+    --sec--light:"#FDCFFA";
+}
+@font-face {
+    font-family: ;
+    src: url();
+}
+*{
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+main{
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+main>nav{
+    height: 85vh;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    position:fixed;
+    right: 4%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+main>nav img{
+    width: 100%;
+}
+nav a{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+}
+nav a span{
+    color: white;
+    opacity: 0;
+    position: relative;
+    left: 50px;
+    z-index: -1;
+}
+nav img:hover{
+    transition: all 0.3s ease-out;
+    transform: scale(1.2);
+}
+nav a:hover span{
+    animation: drag 0.8s ease-in-out forwards;
+}
+@keyframes drag {
+    to{
+        left: 0;
+        opacity: 1;
+    }
+}
+main>.container{
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+/* home */
+main>.home{
+    background-color: #4e56c0;
+    display: grid;
+    place-items: center;
+}
+.home>.text{
+    height: 50%;
+    width: 50%;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    gap: 20px;
+    color: white;
+    .primary{
+        font-size: 2.4rem;
+        position: absolute;
+        top: 40px;
+        left: 20px;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    .tag-line{
+        font-size: 1.2rem;
+    }
+}
+.home>h2{
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    span{
+        color:rgb(242, 97, 0);
+    }
+}
+main>.about{
+    background-color: #9B5DE0;
+}
+main>.service{
+    background-color: #D78FEE;
+}
+main>.project{
+    background-color:#FDCFFA;
+}
+main>.contact{
+    background-color: rgb(255, 0, 85);
+}
